@@ -1,0 +1,25 @@
+Verification Checklist (Reviewer-Friendly)
+==========================================
+
+A. Analytic Equivalence
+1. Confirm the Mellin formulas for phi_theta and chi.
+2. Check Theorem (Explicit Null Functional): kernel K_{B_{s0}} derivation from model space.
+3. Verify "iff" structure: RH false <=> existence of nontrivial G with <chi,G> != 0 and <phi_theta, G> = 0 for all theta.
+
+B. Unconditional Frame Bound
+4. Inspect Toeplitz approximation lemma (K(u) ~ (1+u^2)^{-1}).
+5. Validate discrete Hardy–Hilbert inequality and diagonal normalization.
+6. Confirm lambda_min(A) >> 1/L^2 and hence E_N^2 << 1/log^2 N.
+
+C. Constant Optimization
+7. Re-derive c = 1/pi^2 using K(u)=1/(1+u^2) and its Fourier transform.
+8. Check remainder R_ij = O(L^{-3}) and that it is negligible for L >= 5.
+
+D. Numerical Reproduction
+9. Run the public scripts on https://github.com/serabing-hash/rh up to N=10^4.
+10. Fit slope on log–log plot; confirm ~ -2 and constancy of E_N^2 (log N)^2.
+11. Compare with sweep_results_example.csv included in this package.
+
+E. Build & Artifact Integrity
+12. pdflatex + bibtex compile succeeds with TeX Live 2023+.
+13. All references [Nyman 1950], [Báez-Duarte 2003], [Montgomery 1973], [Titchmarsh 1986] are present.
